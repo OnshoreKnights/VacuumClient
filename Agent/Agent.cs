@@ -12,6 +12,7 @@ namespace IntelligentVacuum.Agent
 
         public AgentAction DecideAction(Room room)
         {
+            Console.WriteLine("This is a git/VS test");
             return AgentAction.NONE;
         }
     }
