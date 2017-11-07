@@ -20,7 +20,7 @@ namespace IntelligentVacuum.Agent
             else 
             {
                 Random random = new Random();
-                int nextDirection = random.Next(0,3);
+                int nextDirection = random.Next(0,4);
                 switch(nextDirection)
                 {
                     case 0:
