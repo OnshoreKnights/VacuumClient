@@ -11,7 +11,8 @@ namespace IntelligentVacuum.Client
         {
             var map = new Environments.AreaMap(xSize, ySize, .5f);
             var actionResult = new ActionResult(map.AgentRoom);
-            var agent = new Agent();
+            var sensor = new Sensor(map);
+            var agent = new Agent(sensor);
             var engine = new GameEngine(map);
             Room agentCurrentRoom = map.Rooms[0,0];
             int startDirt = map.GetDirtCount();

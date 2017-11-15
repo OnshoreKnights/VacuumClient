@@ -6,7 +6,7 @@ namespace IntelligentVacuum.Agent
 
     public class Agent
     {
-        public Agent()
+        public Agent(Sensor sensor)
         {
         }
 
