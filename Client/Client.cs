@@ -52,6 +52,10 @@ namespace IntelligentVacuum.Client
                     {
                         Console.Write('D');
                     }
+                    else if (room.IsLocked)
+                    {
+                        Console.Write('L');
+                    }
                     else
                     {
                         Console.Write(' ');
