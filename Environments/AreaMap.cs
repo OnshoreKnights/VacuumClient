@@ -25,9 +25,9 @@ namespace IntelligentVacuum.Environments
                     {
                         room.IsDirty = true;
                     }
-                    else
+                    else if (rnd.Next(0, 100) < 10)
                     {
-                        // IsDirty is false
+                        room.IsLocked = true;
                     }
                 }
             }
