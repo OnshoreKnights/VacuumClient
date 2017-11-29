@@ -10,7 +10,7 @@ namespace IntelligentVacuum.Environments
 
         public Room AgentRoom;
 
-        public AreaMap(int xSize, int ySize, float dirtProbability)
+        public AreaMap(int xSize, int ySize, float dirtProbability, bool lockRooms)
         {
             var rnd = new Random();
             this.Rooms = new Room[xSize, ySize];
@@ -25,7 +25,7 @@ namespace IntelligentVacuum.Environments
                     {
                         room.IsDirty = true;
                     }
-                    else if (rnd.Next(0, 100) < 30)
+                    else if (lockRooms && rnd.Next(0, 100) < 30)
                     {
                         room.IsLocked = true;
                     }

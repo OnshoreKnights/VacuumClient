@@ -7,9 +7,9 @@ namespace IntelligentVacuum.Client
     public class Client
     {
 
-        public void Run(int xSize, int ySize, int rounds)
+        public void Run(int xSize, int ySize, int rounds, bool lockRooms)
         {
-            var map = new Environments.AreaMap(xSize, ySize, .5f);
+            var map = new Environments.AreaMap(xSize, ySize, .5f, lockRooms);
             var actionResult = new ActionResult(map.AgentRoom);
             var sensor = new Sensor(map);
             var agent = new Agent(sensor);
